@@ -1,5 +1,8 @@
 /**
- *
+ * Questions: tmp variables in venue?
+ * How are venues going to be created?
+ * How are changes handled? Cancel -> Request or request only.
+ * 
  */
 package unsw.venues;
 
@@ -27,6 +30,7 @@ public class VenueHireSystem {
      */
     public VenueHireSystem() {
         // TODO Auto-generated constructor stub
+        venues = new ArrayList<Venue>();
     }
 
     private void processCommand(JSONObject json) {
@@ -82,30 +86,29 @@ public class VenueHireSystem {
         }
     }
 
-    private void addRoom(Venue venue, String room, String size) {
-        // TODO Process the room command
+    private void addRoom(String venue_str, String room, String size) {
+        Venue venue = Venue.getVenue(this.venues, venue_str);
         venue.addRoom(room, size);
     }
 
     public JSONObject request(String id, LocalDate start, LocalDate end,
             int small, int medium, int large) {
-        JSONObject result = new JSONObject();
 
         // TODO Process the request commmand
-
-        // FIXME Shouldn't always produce the same answer
-        result.put("status", "success");
-        result.put("venue", "Zoo");
-
-        JSONArray rooms = new JSONArray();
-        rooms.put("Penguin");
-        rooms.put("Hippo");
-
-        result.put("rooms", rooms);
-        return result;
+        for (Venue venue : venues) {
+            ArrayList<Room> availableRooms = venue.roomAvailability(start, end, small, medium, large);
+            // Check if available rooms can fulfil request
+            if (availableRooms != null) {
+                // Request can be fulfiled.
+                Reservation reservation = venue.makeReservation(id, availableRooms, start, end);
+                return outputSuccess(reservation);
+            }
+        }
+        // Looked through all venues but cannot fulful request
+        return outputRejected();
     }
 
-    public JSONObject change(String id, LocalDte start, LocalDate end, int small, int medium, int large) {
+    public JSONObject change(String id, LocalDate start, LocalDate end, int small, int medium, int large) {
         JSONObject result = new JSONObject();
 
         // TODO Process the change command
@@ -113,14 +116,35 @@ public class VenueHireSystem {
         return result;
     }
 
-    public  JSONObject list(String venue) {
+    public  JSONArray list(String venue) {
         // TODO Process the list command
+        JSONArray list = new JSONArray();
 
+        return list;
     }
 
     public void cancel(String id) {
         // TODO Process the cancel command
     }
+
+    private JSONObject outputRejected() {
+        JSONObject rejected = new JSONObject();
+        rejected.put("status", "rejected");
+        return rejected;
+    }
+
+    private JSONObject outputSuccess(Reservation reservation) {
+        JSONObject success = new JSONObject();
+        success.put("venue", reservation.getVenueName());
+        JSONArray rooms = new JSONArray();
+        for (Room room : reservation.getRooms()) {
+            rooms.put(room.getName());
+        }
+        success.put("rooms", rooms);
+        success.put("status", "success");
+        return success;
+    }
+
     public static void main(String[] args) {
         VenueHireSystem system = new VenueHireSystem();
 
