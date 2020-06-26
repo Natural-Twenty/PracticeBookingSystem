@@ -1,0 +1,18 @@
+{ "command": "room", "venue": "Smol", "room": "Petite", "size": "small" }
+{ "command": "room", "venue": "Lil Big", "room": "Average", "size": "medium" }
+{ "command": "room", "venue": "Big boi", "room": "Fat Man", "size": "large" }
+{ "command": "list", "venue": "Smol" }
+{ "command": "list", "venue": "Lil Big" }
+{ "command": "list", "venue": "Big boi" }
+{ "command": "request", "id": "Smol meeting", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
+{ "command": "request", "id": "Lil Big gathering", "start": "2019-03-25", "end": "2019-03-26", "small": 0, "medium": 1, "large": 0 }
+{ "command": "request", "id": "Big boi concert", "start": "2019-03-25", "end": "2019-03-26", "small": 0, "medium": 0, "large": 1 }
+{ "command": "list", "venue": "Smol" }
+{ "command": "list", "venue": "Lil Big" }
+{ "command": "list", "venue": "Big boi" }
+{ "command": "cancel", "id": "Smol meeting" }
+{ "command": "cancel", "id": "Lil Big gathering" }
+{ "command": "cancel", "id": "Big boi concert" }
+{ "command": "list", "venue": "Smol" }
+{ "command": "list", "venue": "Lil Big" }
+{ "command": "list", "venue": "Big boi" }

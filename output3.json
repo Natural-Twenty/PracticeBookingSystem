@@ -1,0 +1,54 @@
+{
+  "venue": "venueA",
+  "rooms": ["smolA"],
+  "status": "success"
+}
+{
+  "venue": "venueB",
+  "rooms": ["smolB"],
+  "status": "success"
+}
+{
+  "venue": "venueA",
+  "rooms": ["smolA"],
+  "status": "success"
+}
+{
+  "venue": "venueB",
+  "rooms": ["smolB"],
+  "status": "success"
+}
+{
+  "venue": "venueC",
+  "rooms": ["smolC"],
+  "status": "success"
+}
+{"status": "rejected"}
+{"status": "rejected"}
+{"status": "rejected"}
+{"status": "rejected"}
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "diffVenueTest"
+  }],
+  "room": "smolA"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "fillUP1"
+  }],
+  "room": "smolB"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "fillUP2"
+  }],
+  "room": "smolC"
+}]
+

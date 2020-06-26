@@ -1,0 +1,63 @@
+[{
+  "reservations": [],
+  "room": "Petite"
+}]
+[{
+  "reservations": [],
+  "room": "Average"
+}]
+[{
+  "reservations": [],
+  "room": "Fat Man"
+}]
+{
+  "venue": "Smol",
+  "rooms": ["Petite"],
+  "status": "success"
+}
+{
+  "venue": "Lil Big",
+  "rooms": ["Average"],
+  "status": "success"
+}
+{
+  "venue": "Big boi",
+  "rooms": ["Fat Man"],
+  "status": "success"
+}
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "Smol meeting"
+  }],
+    "room": "Petite"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "Lil Big gathering"
+  }],
+  "room": "Average"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "Big boi concert"
+  }],
+  "room": "Fat Man"
+}]
+[{
+  "reservations": [],
+  "room": "Petite"
+}]
+[{
+  "reservations": [],
+  "room": "Average"
+}]
+[{
+  "reservations": [],
+  "room": "Fat Man"
+}]

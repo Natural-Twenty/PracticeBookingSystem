@@ -1,0 +1,77 @@
+{
+  "venue": "ChangeTest",
+  "rooms": ["smol"],
+  "status": "success"
+}
+{
+  "venue": "ChangeTest",
+  "rooms": ["smol"],
+  "status": "success"
+}
+[
+  {
+    "reservations": [{
+      "start": "2019-03-27",
+      "end": "2019-03-29",
+      "id": "Same Date"
+    }],
+    "room": "smol"
+  },
+  {
+    "reservations": [],
+    "room": "med"
+  },
+  {
+    "reservations": [],
+    "room": "big"
+  }
+]
+{"status": "rejected"}
+{
+  "venue": "ChangeTest",
+  "rooms": ["med"],
+  "status": "success"
+}
+{"status": "rejected"}
+[
+  {
+    "reservations": [],
+    "room": "smol"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-27",
+      "end": "2019-03-29",
+      "id": "Same Date"
+    }],
+    "room": "med"
+  },
+  {
+    "reservations": [],
+    "room": "big"
+  }
+]
+{
+  "venue": "ChangeTest",
+  "rooms": ["big"],
+  "status": "success"
+}
+{"status": "rejected"}
+[
+  {
+    "reservations": [],
+    "room": "smol"
+  },
+  {
+    "reservations": [],
+    "room": "med"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-27",
+      "end": "2019-03-29",
+      "id": "Same Date"
+    }],
+    "room": "big"
+  }
+]

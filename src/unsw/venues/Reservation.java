@@ -2,7 +2,9 @@ package unsw.venues;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+/**
+ * A reservation that contains information on the venue where the reservation takes place, the unique id, list of rooms, starting and end date.
+ */
 
 
 public class Reservation {
@@ -61,12 +63,29 @@ public class Reservation {
     public LocalDate getStart() {
         return start;
     }
+
+    /**
+     * Getter method to retrieve the start date in String form.
+     * @return The start date in String form.
+     */
+    public String getStartString() {
+        return getStart().toString();
+    }
     /**
      * Getter method to retrieve ending date
      * @return Returns the ending date of the reservation
      */
     public LocalDate getEnd() {
         return end;
+    }
+
+    /**
+     * Getter method to retrieve the end date in String form.
+     * 
+     * @return The end date in String form.
+     */
+    public String getEndString() {
+        return getEnd().toString();
     }
     /**
      * Getter method to retreieve venue name
@@ -77,25 +96,15 @@ public class Reservation {
     }
 
     /**
-     * Searches a given Reservations ArrayList and returns a Reservation ArrayList with reservations
-     * containing the given room.
-     * @param reservations An ArrayList of type Reservations
-     * @param room A room of type room you want to search for
-     * @return Returns an ArrayList of type Reservations containing the specified room
+     * Checks if the given id is equal to the reservation's id
+     * @param id Unique id to be compared with.
+     * @return True if the id is equal. Otherwise, return false.
      */
-    // Within each reservation, look through the rooms ArrayList for a room matching the
-    // given room. If there is a match, add it to the newly created ArrayList of Reserveration.
-    public static ArrayList<Reservation> searchReservation(ArrayList<Reservation> reservations, Room room) {
-        ArrayList<Reservation> resultReservation = new ArrayList<Reservation>();
-        for (Reservation reservation : reservations) {
-            for (Room reservedRoom : reservation.getRooms()) {
-                if (reservedRoom.getName().equals(room.getName())) {
-                    resultReservation.add(reservation);
-                }
-            }
-        }
-        return resultReservation;
+    private boolean IDequals(String id) {
+        return this.id.equals(id);
     }
+
+
     /**
      * Checks if there is a date overlap between the requested time and the room's reservation
      * times. Return is boolean. Note: dates are inclusive so overlap occurs if a reserved date equals a requeted date.
@@ -108,6 +117,7 @@ public class Reservation {
     // OR after reserved end dates. 
     public static boolean hasDateOverlap(ArrayList<Reservation> reservations, LocalDate start, LocalDate end) {
         for (Reservation reservation : reservations) {
+            // No overlap condition logic
             if ((start.isBefore(reservation.getStart()) && end.isBefore(reservation.getStart())) ||
                 (start.isAfter(reservation.getEnd()) && end.isAfter(reservation.getEnd()))) {
                 // No overlap so continue
@@ -120,4 +130,84 @@ public class Reservation {
         // Iterated through all reservations without overlap.
         return false;
     }
+
+    /**
+     * An overloaded method. Searches through an ArrayList of reservations according to input. This particular method searches for a reservation matching an id.
+     * @param reservations An ArrayList of Reservation instances
+     * @param id Unique id of a reservation to search for.
+     * @return Returns the reservation instance matching the id. if none is found, retuen null.
+     */
+    public static Reservation searchReservation(ArrayList<Reservation> reservations, String id) {
+        for (Reservation reservation : reservations) {
+            if (reservation.IDequals(id)) {
+                // reservation found
+                return reservation;
+            }
+        }
+        // id not found in this venue's reservation list.
+        return null;
+    }
+
+    /**
+     * An overloaded method. This particular method searches through reservations and finds reservations that contain the given room.
+     * @param reservations ArrayList of Reservation instances
+     * @param room Room instance to search reservations by.
+     * @return An ArrayList of Reservation instanes that contain the toom.
+     */
+    
+    public static ArrayList<Reservation> searchReservation(ArrayList<Reservation> reservations, Room room) {
+        ArrayList<Reservation> result = new ArrayList<Reservation>();
+        for (Reservation reservation : reservations) {
+            if (Room.containsRoom(reservation.getRooms(), room)) {
+                result.add(reservation);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Sorting method that sorts reservations by date (earliest to latest). It creates a new ArrayList of Reservation instances and destroys the old one.
+     * @param reservations An ArrayList of Reservation instances.
+     * @return A new ArrayList of Reservation instances sorted by date.
+     */
+    public static ArrayList<Reservation> sortByDate(ArrayList<Reservation> reservations) {
+        ArrayList<Reservation> result = new ArrayList<Reservation>();
+        // If given list only contains 1 instance, simple return since no sorting is needed.
+        if (reservations.size() == 1) {
+            return reservations;
+        }
+        // Store the original size of the reservation arraylist 
+        int size = reservations.size();
+        // Continue to operate until size of new arraylist matches the original. That way, we know it contains all the original instances but is now sorted.
+        while (result.size() < size) {
+            // Set earliest date to first as a placeholder.
+            Reservation min = reservations.get(0);
+            // Last element reached, no comparisons needed so add to new arraylist and remove from the original and return.
+            if (reservations.size() == 1) {
+                    result.add(min);
+                    reservations.remove(min);
+                    return result;
+            }
+            // Search for the earliest date and store it
+            for (Reservation reservation : reservations) {
+                if (reservation.dateIsBefore(min.getStart())) {
+                    min = reservation;
+                }
+            }
+            // Add the stored date to new arraylist and remove it from the original.
+            result.add(min);
+            reservations.remove(min);
+        }
+        return result;
+    }
+    
+    /**
+     * Checks whether the reservation's date is before the given date.
+     * @param start The date to check.
+     * @return True if the reservation's date is before the given date. Otherwise, false.
+     */
+    private boolean dateIsBefore(LocalDate start) {
+        return this.start.isBefore(start);
+    }
+
 }

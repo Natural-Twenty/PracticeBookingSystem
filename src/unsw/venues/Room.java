@@ -1,5 +1,10 @@
 package unsw.venues;
 
+import java.util.ArrayList;
+
+/**
+ * A room belonging to a venue. It has a name and a size.
+ */
 public class Room {
     private Venue venue;
     private String name;
@@ -55,6 +60,17 @@ public class Room {
     public void setSize(String size) {
         this.size = size;
     }
+
+    /**
+     * Checks an ArrayList of Room instances whether there is at least one of the provided room within that arraylist
+     * @param rooms An arraylist of Room instances to check through
+     * @param room The room we want to check for
+     * @return True if the arraylist contains the given room. False if not.
+     */
+    public static boolean containsRoom(ArrayList<Room> rooms, Room room) {
+        return rooms.contains(room);
+    }
+
 
 
 }

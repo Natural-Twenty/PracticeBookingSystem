@@ -1,0 +1,15 @@
+{ "command": "room", "venue": "ChangeTest", "room": "smol", "size": "small" }
+{ "command": "room", "venue": "ChangeTest", "room": "med", "size": "medium" }
+{ "command": "room", "venue": "ChangeTest", "room": "big", "size": "large" }
+{ "command": "request", "id": "Same Date", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 1, "medium": 0, "large": 0 }
+{ "command": "list", "venue": "ChangeTest" }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 1, "medium": 0, "large": 0 }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 1, "large": 0 }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 1, "large": 0 }
+{ "command": "list", "venue": "ChangeTest" }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 0, "large": 1 }
+{ "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 0, "large": 1 }
+{ "command": "list", "venue": "ChangeTest" }
+
+
