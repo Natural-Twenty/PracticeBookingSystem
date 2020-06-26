@@ -6,10 +6,13 @@
 { "command": "change", "id": "diffVenueTest", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "request", "id": "fillUP1", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "request", "id": "fillUP2", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
-{ "command": "request", "id": "overflow", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
+{ "command": "request", "id": "makeRoom", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
+{ "command": "request", "id": "notEnoughRooms", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "change", "id": "diffVenueTest", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "change", "id": "fillUP1", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "change", "id": "fillUP2", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
+{ "command": "cancel", "id": "fillUP2" }
+{ "command": "request", "id": "makeRoom", "start": "2019-03-25", "end": "2019-03-26", "small": 1, "medium": 0, "large": 0 }
 { "command": "list", "venue": "venueA" }
 { "command": "list", "venue": "venueB" }
 { "command": "list", "venue": "venueC" }

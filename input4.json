@@ -1,0 +1,16 @@
+{ "command": "room", "venue": "Many rooms", "room": "smolA", "size": "small" }
+{ "command": "room", "venue": "Many rooms", "room": "smolB", "size": "small" }
+{ "command": "room", "venue": "Many rooms", "room": "medA", "size": "medium" }
+{ "command": "room", "venue": "Many rooms", "room": "medB", "size": "medium" }
+{ "command": "room", "venue": "Many rooms", "room": "bigA", "size": "large" }
+{ "command": "room", "venue": "Many rooms", "room": "bigB", "size": "large" }
+{ "command": "request", "id": "diff Dates", "start": "2019-03-25", "end": "2019-03-26", "small": 2, "medium": 0, "large": 1 }
+{ "command": "request", "id": "seperateDates", "start": "2019-03-20", "end": "2019-03-21", "small": 1, "medium": 0, "large": 2 }
+{ "command": "request", "id": "inclusive Dates", "start": "2019-03-22", "end": "2019-03-23", "small": 0, "medium": 2, "large": 0 }
+{ "command": "request", "id": "date Inclsuive", "start": "2019-03-23", "end": "2019-03-24", "small": 0, "medium": 2, "large": 0 }
+{ "command": "list", "venue": "Many rooms" }
+{ "command": "request", "id": "date change", "start": "2019-03-10", "end": "2019-03-15", "small": 0, "medium": 2, "large": 0 }
+{ "command": "change", "id": "date change", "start": "2019-03-12", "end": "2019-03-13", "small": 0, "medium": 2, "large": 0 }
+{ "command": "change", "id": "date change", "start": "2019-03-09", "end": "2019-03-16", "small": 0, "medium": 2, "large": 0 }
+{ "command": "list", "venue": "Many rooms" }
+

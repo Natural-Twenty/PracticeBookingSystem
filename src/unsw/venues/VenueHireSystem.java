@@ -154,9 +154,9 @@ public class VenueHireSystem {
         *     can satisfy all requested rooms.
         *  2. If so, the first available rooms (in order of input) are assigned to the reservation.
         */
-        // Store the original reservation if we need to remove. We need to do this due to the required
-        // process of the change implementation: Search for venues that can fulfil the request,
-        // make the request, then cancel. This ensure that the newly made request is not cancelled.
+        // Store the original reservation. We need to do this because based on the dryrun tests, invoking a change command
+        // cancels the reservation, then searches through venues for rooms to fulfil the request. If it is found, request using
+        // new details. Otherwise, change cannot be fulfilled so we have to add the canceled reservation back.
         Reservation tmpReservation = Venue.searchReservation(venues, id);
         tmpReservation.getVenue().cancelReservation(tmpReservation);
         // Search for the reservation id.

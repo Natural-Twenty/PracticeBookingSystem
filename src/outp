@@ -24,6 +24,7 @@
   "status": "success"
 }
 {"status": "rejected"}
+{"status": "rejected"}
 {
   "venue": "venueA",
   "rooms": ["smolA"],
@@ -32,6 +33,11 @@
 {
   "venue": "venueB",
   "rooms": ["smolB"],
+  "status": "success"
+}
+{
+  "venue": "venueC",
+  "rooms": ["smolC"],
   "status": "success"
 }
 {
@@ -59,7 +65,7 @@
   "reservations": [{
     "start": "2019-03-25",
     "end": "2019-03-26",
-    "id": "fillUP2"
+    "id": "makeRoom"
   }],
   "room": "smolC"
 }]

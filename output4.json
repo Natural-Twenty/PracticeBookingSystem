@@ -1,0 +1,193 @@
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "smolA",
+    "smolB",
+    "bigA"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "smolA",
+    "bigA",
+    "bigB"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "medA",
+    "medB"
+  ],
+  "status": "success"
+}
+{"status": "rejected"}
+[
+  {
+    "reservations": [
+      {
+        "start": "2019-03-20",
+        "end": "2019-03-21",
+        "id": "seperateDates"
+      },
+      {
+        "start": "2019-03-25",
+        "end": "2019-03-26",
+        "id": "diff Dates"
+      }
+    ],
+    "room": "smolA"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-25",
+      "end": "2019-03-26",
+      "id": "diff Dates"
+    }],
+    "room": "smolB"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-22",
+      "end": "2019-03-23",
+      "id": "inclusive Dates"
+    }],
+    "room": "medA"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-22",
+      "end": "2019-03-23",
+      "id": "inclusive Dates"
+    }],
+    "room": "medB"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-03-20",
+        "end": "2019-03-21",
+        "id": "seperateDates"
+      },
+      {
+        "start": "2019-03-25",
+        "end": "2019-03-26",
+        "id": "diff Dates"
+      }
+    ],
+    "room": "bigA"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-20",
+      "end": "2019-03-21",
+      "id": "seperateDates"
+    }],
+    "room": "bigB"
+  }
+]
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "medA",
+    "medB"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "medA",
+    "medB"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Many rooms",
+  "rooms": [
+    "medA",
+    "medB"
+  ],
+  "status": "success"
+}
+[
+  {
+    "reservations": [
+      {
+        "start": "2019-03-20",
+        "end": "2019-03-21",
+        "id": "seperateDates"
+      },
+      {
+        "start": "2019-03-25",
+        "end": "2019-03-26",
+        "id": "diff Dates"
+      }
+    ],
+    "room": "smolA"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-25",
+      "end": "2019-03-26",
+      "id": "diff Dates"
+    }],
+    "room": "smolB"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-03-09",
+        "end": "2019-03-16",
+        "id": "date change"
+      },
+      {
+        "start": "2019-03-22",
+        "end": "2019-03-23",
+        "id": "inclusive Dates"
+      }
+    ],
+    "room": "medA"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-03-09",
+        "end": "2019-03-16",
+        "id": "date change"
+      },
+      {
+        "start": "2019-03-22",
+        "end": "2019-03-23",
+        "id": "inclusive Dates"
+      }
+    ],
+    "room": "medB"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-03-20",
+        "end": "2019-03-21",
+        "id": "seperateDates"
+      },
+      {
+        "start": "2019-03-25",
+        "end": "2019-03-26",
+        "id": "diff Dates"
+      }
+    ],
+    "room": "bigA"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-20",
+      "end": "2019-03-21",
+      "id": "seperateDates"
+    }],
+    "room": "bigB"
+  }
+]

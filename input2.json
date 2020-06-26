@@ -11,5 +11,14 @@
 { "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 0, "large": 1 }
 { "command": "change", "id": "Same Date", "start": "2019-03-27", "end": "2019-03-29", "small": 0, "medium": 0, "large": 1 }
 { "command": "list", "venue": "ChangeTest" }
+{ "command": "room", "venue": "newVenue", "room": "newSmol", "size": "small" }
+{ "command": "room", "venue": "newVenue", "room": "newMed", "size": "medium" }
+{ "command": "room", "venue": "newVenue", "room": "newLarge", "size": "large" }
+{ "command": "request", "id": "One of everything", "start": "2019-03-27", "end": "2019-03-29", "small": 1, "medium": 1, "large": 1 }
+{ "command": "list", "venue": "newVenue" }
+{ "command": "cancel", "id": "Same Date" }
+{ "command": "change", "id": "One of everything", "start": "2019-03-27", "end": "2019-03-29", "small": 1, "medium": 1, "large": 1 }
+{ "command": "list", "venue": "ChangeTest" }
+{ "command": "list", "venue": "newVenue" }
 
 
