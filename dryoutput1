@@ -1,0 +1,24 @@
+{
+  "venue": "Zoo",
+  "rooms": ["Penguin"],
+  "status": "success"
+}
+{
+  "venue": "Zoo",
+  "rooms": ["Hippo"],
+  "status": "success"
+}
+[
+  {
+    "reservations": [],
+    "room": "Penguin"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-26",
+      "end": "2019-03-26",
+      "id": "Dance Party"
+    }],
+    "room": "Hippo"
+  }
+]

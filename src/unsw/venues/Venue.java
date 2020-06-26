@@ -103,7 +103,7 @@ public class Venue {
      * Adds a reservation to the reservation list in the instane.
      * @param reservation The reservation to be added.
      */
-    private void addReservation(Reservation reservation) {
+    public void addReservation(Reservation reservation) {
         reservations.add(reservation);
     }
     

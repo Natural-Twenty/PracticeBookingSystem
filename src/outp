@@ -1,58 +1,53 @@
 {
-  "venue": "Zoo",
-  "rooms": [
-    "Penguin",
-    "Hippo"
-  ],
+  "venue": "venueA",
+  "rooms": ["smolA"],
   "status": "success"
 }
 {
-  "venue": "Zoo",
-  "rooms": ["Elephant"],
+  "venue": "venueB",
+  "rooms": ["smolB"],
   "status": "success"
 }
 {
-  "venue": "Gardens",
-  "rooms": ["Figtree"],
+  "venue": "venueA",
+  "rooms": ["smolA"],
   "status": "success"
 }
 {
-  "venue": "Zoo",
-  "rooms": ["Penguin"],
+  "venue": "venueB",
+  "rooms": ["smolB"],
   "status": "success"
 }
 {
-  "venue": "Zoo",
-  "rooms": ["Penguin"],
+  "venue": "venueC",
+  "rooms": ["smolC"],
   "status": "success"
 }
 {"status": "rejected"}
-[
-  {
-    "reservations": [
-      {
-        "start": "2019-03-25",
-        "end": "2019-03-26",
-        "id": "CSE Autumn Ball"
-      },
-      {
-        "start": "2019-03-27",
-        "end": "2019-03-29",
-        "id": "Annual Meeting"
-      }
-    ],
-    "room": "Penguin"
-  },
-  {
-    "reservations": [],
-    "room": "Hippo"
-  },
-  {
-    "reservations": [{
-      "start": "2019-03-24",
-      "end": "2019-03-27",
-      "id": "Mattress Convention"
-    }],
-    "room": "Elephant"
-  }
-]
+{"status": "rejected"}
+{"status": "rejected"}
+{"status": "rejected"}
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "diffVenueTest"
+  }],
+  "room": "smolA"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "fillUP1"
+  }],
+  "room": "smolB"
+}]
+[{
+  "reservations": [{
+    "start": "2019-03-25",
+    "end": "2019-03-26",
+    "id": "fillUP2"
+  }],
+  "room": "smolC"
+}]

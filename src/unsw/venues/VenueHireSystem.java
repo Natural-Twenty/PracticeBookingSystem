@@ -154,9 +154,12 @@ public class VenueHireSystem {
         *     can satisfy all requested rooms.
         *  2. If so, the first available rooms (in order of input) are assigned to the reservation.
         */
-        // Search for the reservation id.
+        // Store the original reservation if we need to remove. We need to do this due to the required
+        // process of the change implementation: Search for venues that can fulfil the request,
+        // make the request, then cancel. This ensure that the newly made request is not cancelled.
         Reservation tmpReservation = Venue.searchReservation(venues, id);
-
+        tmpReservation.getVenue().cancelReservation(tmpReservation);
+        // Search for the reservation id.
         for (Venue venue : venues) {
             
             // See if change can be fulfilled.
@@ -169,11 +172,13 @@ public class VenueHireSystem {
                 result = request(id, start, end, small, medium, large);
                 // Change can be fulfilled so cancel old reservation and
                 // request with new details
-                tmpReservation.getVenue().cancelReservation(tmpReservation);
+                
+                
                 return result;
             }
         }
-        // Change cannot be fulfilled so reject it
+        // Change cannot be fulfilled so reject it. Also, make sure to add the original back in.
+        tmpReservation.getVenue().addReservation(tmpReservation);
         return outputRejected();
     }
 
