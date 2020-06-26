@@ -4,8 +4,8 @@
   "status": "success"
 }
 {
-  "venue": "venueB",
-  "rooms": ["smolB"],
+  "venue": "venueA",
+  "rooms": ["smolA"],
   "status": "success"
 }
 {
@@ -24,9 +24,21 @@
   "status": "success"
 }
 {"status": "rejected"}
-{"status": "rejected"}
-{"status": "rejected"}
-{"status": "rejected"}
+{
+  "venue": "venueA",
+  "rooms": ["smolA"],
+  "status": "success"
+}
+{
+  "venue": "venueB",
+  "rooms": ["smolB"],
+  "status": "success"
+}
+{
+  "venue": "venueC",
+  "rooms": ["smolC"],
+  "status": "success"
+}
 [{
   "reservations": [{
     "start": "2019-03-25",
