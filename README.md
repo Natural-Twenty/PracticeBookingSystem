@@ -1,4 +1,4 @@
-# Practice project - Venue Hire System
+# Project - Venue Hire System
 
 ## Set time limitation: 2 weeks
 
